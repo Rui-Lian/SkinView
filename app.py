@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import tensorflow
+import tensorflow as tf
 from tensorflow.keras.utils import load_img, img_to_array
 
 # Cache the model load (for older Streamlit, change to @st.cache(allow_output_mutation=True))
@@ -31,4 +31,5 @@ if uploaded_file is not None:
 
     st.write(f"**Prediction:** {label}")
     st.write(f"**Probability (malignant):** {prediction:.4f}")
+
 
