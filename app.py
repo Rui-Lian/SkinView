@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from tensorflow.keras.preprocessing import image
+from tensorflow.keras.utils import load_img, img_to_array
 
 # Cache the model load (for older Streamlit, change to @st.cache(allow_output_mutation=True))
 @st.cache_resource(show_spinner=True)
@@ -14,10 +14,10 @@ st.title("Skin Lesion Classification")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    img = image.load_img(uploaded_file, target_size=(224, 224))
+    img = load_img(path, target_size=(224, 224))
     st.image(img, caption='Uploaded Image', use_column_width=True)
 
-    img_array = image.img_to_array(img)
+    img_array = img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
     img_array = img_array
 
