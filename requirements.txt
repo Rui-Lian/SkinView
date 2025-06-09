@@ -1,4 +1,2 @@
-streamlit
-numpy
-keras
-tensorflow
+tensorflow==2.15.0  # Example that works with Python 3.10/3.11
+keras==2.15.0
