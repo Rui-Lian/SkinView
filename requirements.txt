@@ -1,2 +1,4 @@
 streamlit
-tensorflow==2.11
+numpy
+keras>=3.0.0
+tensorflow>=2.15.0
