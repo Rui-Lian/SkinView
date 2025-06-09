@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from tensorflow.keras.utils import load_img, img_to_array
+from keras.utils import load_img, img_to_array
 
 # Cache the model load (for older Streamlit, change to @st.cache(allow_output_mutation=True))
 @st.cache_resource(show_spinner=True)
